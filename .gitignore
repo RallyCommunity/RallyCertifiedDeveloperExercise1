@@ -4,8 +4,12 @@ credentials.json
 # Ignore debug build version of App
 App-debug.html
 
+#unless it is in the template folder then it is allowed
+!templates/App-debug.html
+
 # Ignore 'local' build version of App
 App-local.html
+
 
 # Ignore generated files
 gen
