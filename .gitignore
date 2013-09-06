@@ -17,3 +17,8 @@ node_modules
 .idea
 .c9revisions
 node_modules
+
+
+.grunt
+
+_SpecRunner.html
