@@ -1,4 +1,4 @@
-Excercise 1 - Data Stores
+Exercise 1 - Data Stores
 =========================
 
 ## Overview
