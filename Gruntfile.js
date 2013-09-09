@@ -8,7 +8,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-templater');
-  grunt.loadNpmTasks('rally-app-builder');
 
   grunt.registerTask('default', ['clean', 'concat', 'template']);
   grunt.registerTask('test', ['default', 'jasmine']);
@@ -48,7 +47,7 @@ module.exports = function(grunt) {
 
     watch: {
       src: {
-        files: 'src/**/*.js',
+        files: ['src/**/*.js',"styles/**/*.css"],
         tasks: ['template:debug', 'jasmine', 'clean', 'concat', 'template:build']
       },
       config: {
