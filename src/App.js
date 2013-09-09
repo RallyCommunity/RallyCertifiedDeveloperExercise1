@@ -14,6 +14,25 @@ Ext.define('CustomApp', {
     },
 
     launch: function() {
-
+        Ext.create('Rally.data.WsapiDataStore', {
+                    model: 'User Story',
+                    listeners: {
+                        load: function(store, records, success) {
+                            console.log(records);
+                        }
+                    },
+                    filters: [
+                        {
+                            property: 'Blocked',
+                            value: false
+                        }
+                    ],
+                    autoLoad:true,
+                    listeners:{
+                        load:this.fireFromTheStore
+                    },
+                    fetch: true
+        });
     }
 });
+ 
